@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/IbrahimPortfolio/static/css/main.82c7dc25.css",
+    "main.js": "/IbrahimPortfolio/static/js/main.9a928250.js",
+    "static/js/770.a36fb58a.chunk.js": "/IbrahimPortfolio/static/js/770.a36fb58a.chunk.js",
+    "static/js/453.ace21015.chunk.js": "/IbrahimPortfolio/static/js/453.ace21015.chunk.js",
+    "static/media/BCVid.mp4": "/IbrahimPortfolio/static/media/BCVid.060a68c5f186aea05a09.mp4",
+    "static/media/SoulsLikeVid.mp4": "/IbrahimPortfolio/static/media/SoulsLikeVid.651a594073aef2af32b2.mp4",
+    "static/media/HeroKnightVid.mp4": "/IbrahimPortfolio/static/media/HeroKnightVid.ed0912769255ee926e12.mp4",
+    "static/media/Worms.mp4": "/IbrahimPortfolio/static/media/Worms.28602d23debb6451b857.mp4",
+    "static/media/DominosVid.mp4": "/IbrahimPortfolio/static/media/DominosVid.d63dbbf222b75c10407e.mp4",
+    "static/media/myimages.png": "/IbrahimPortfolio/static/media/myimages.862e899ca66f5f96f727.png",
+    "static/media/witchcraft.png": "/IbrahimPortfolio/static/media/witchcraft.8b06fe99c06bcbb86197.png",
+    "static/media/dominos2.png": "/IbrahimPortfolio/static/media/dominos2.6c1c47659631b94a3f31.png",
+    "static/media/Ibrahim Ben Lazrak CV.pdf": "/IbrahimPortfolio/static/media/Ibrahim Ben Lazrak CV.16b026ecf9a75e29245f.pdf",
+    "static/media/home-main1.png": "/IbrahimPortfolio/static/media/home-main1.cf86922506367177c330.png",
+    "static/media/logo.png": "/IbrahimPortfolio/static/media/logo.c90c160707349d115745.png",
+    "static/media/HeroKnight.png": "/IbrahimPortfolio/static/media/HeroKnight.7206044e0b5cdad44726.png",
+    "static/media/avatar.svg": "/IbrahimPortfolio/static/media/avatar.7f806e40d46fc76fbc3c4a3d71349951.svg",
+    "static/media/pre.svg": "/IbrahimPortfolio/static/media/pre.4410c5baaa673cc131da.svg",
+    "index.html": "/IbrahimPortfolio/index.html",
+    "main.82c7dc25.css.map": "/IbrahimPortfolio/static/css/main.82c7dc25.css.map",
+    "main.9a928250.js.map": "/IbrahimPortfolio/static/js/main.9a928250.js.map",
+    "770.a36fb58a.chunk.js.map": "/IbrahimPortfolio/static/js/770.a36fb58a.chunk.js.map",
+    "453.ace21015.chunk.js.map": "/IbrahimPortfolio/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82c7dc25.css",
+    "static/js/main.9a928250.js"
+  ]
+}
