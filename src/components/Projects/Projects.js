@@ -57,6 +57,7 @@ function Projects() {
               title="Witch and Craft"
               description="Witch and Craft is a 3D game demo developed in Unity, where players explore a lush jungle environment. Taking on the role of a spellcaster, players complete various objectives and battle enemies using their staff and powerful spells. This immersive demo showcases captivating visuals and dynamic gameplay."
               demoLink="https://youtu.be/iAmeZXckum8"
+              ghLink="https://drive.google.com/file/d/17iThOvYXyMKJzIpYylQNxAsgQHspFpUd/view?usp=sharing"
             />
           </Col>
 
@@ -106,7 +107,7 @@ function Projects() {
               isBlog={false}
               title="kbe chart gen"
               description="xxxxxxxxxxxxxxxxxxxxxx."
-              ghLink="https://github.com/soumyajit4419/Chatify"
+              ghLink=""
               demoLink="https://chatify-49.web.app/"
             />
           </Col>
@@ -117,7 +118,7 @@ function Projects() {
               isBlog={false}
               title="Prod+"
               description="xxxxxxxxxxxxxxxxx."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
+              ghLink=""
               demoLink="https://blogs.soumya-jit.tech/"
             />
           </Col>
@@ -128,7 +129,7 @@ function Projects() {
               isBlog={false}
               title="Doc appoint"
               description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
+              ghLink=""
               demoLink="https://editor.soumya-jit.tech/"
             />
           </Col> 

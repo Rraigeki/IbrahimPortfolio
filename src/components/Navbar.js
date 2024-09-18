@@ -50,7 +50,7 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
+        <Navbar.Brand href="https://rraigeki.github.io/IbrahimPortfolio/" className="d-flex">
           <img src={logo} className="img-fluid logo" alt="brand" />
         </Navbar.Brand>
         <Navbar.Toggle
@@ -66,34 +66,34 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <span
+              <Nav.Link
                 className="nav-link"
                 style={{ cursor: "pointer" }}
                 onClick={() => handleNavClick("home")}
               >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
-              </span>
+              </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <span
+            <Nav.Link
                 className="nav-link"
                 style={{ cursor: "pointer" }}
                 onClick={() => handleNavClick("about")}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
-              </span>
+              </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <span
+            <Nav.Link
                 className="nav-link"
                 style={{ cursor: "pointer" }}
                 onClick={() => handleNavClick("projects")}
               >
                 <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} />{" "}
                 Projects
-              </span>
+              </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
