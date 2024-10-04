@@ -20,18 +20,20 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I'm a programmer with experience mostly in gameplay programming, 
-              I build <b className="purple">modern websites, mobile, desktop applications</b> and most imporantly<b className="purple"> video games</b> 😀
+              I'm a passionate programmer with a primary focus on <i> <b className="purple">video game development</b>, </i> 
+              with experience in building <b className="purple">modern websites, mobile, desktop applications</b>, my expertise shines in the realm of<b className="purple"> gameplay programming.</b> 😀
               <br />
-              <br />I am fluent in classics like
+              <br />I'm proficient in industry-standard languages like
               <i>
-                <b className="purple"> C#, C++, C, and Javascript . </b>
+                <b className="purple"> C#, C++, C, and Javascript </b>
               </i>
+              which allows me to smoothly transition between game engines and software platforms.
               <br />
               <br />
-              My field of Interest's are building  &nbsp;
+              While video game development is my primary passion, I also enjoy applying my skills to   &nbsp;
               <i>
-                <b className="purple">Websites, Mobile Apps and Video Games </b>               
+                <b className="purple">create dynamic websites and mobile apps. </b>    <br/>     <br/>       
+                <b className="purple">Let’s create something amazing! </b>               
               </i>
               <br />
               <br />
