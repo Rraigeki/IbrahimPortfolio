@@ -64,29 +64,23 @@ function ResumeNew() {
             variant="primary"
             href={getCurrentPdf()}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            style={{ maxWidth: "300px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download {getCurrentLanguageLabel()} CV
+            &nbsp;View Full {getCurrentLanguageLabel()} CV and Download
           </Button>
         </Row>
 
-        {/* PDF Display - All Pages */}
-        {numPages && Array.from({ length: numPages }, (_, i) => i + 1).map(pageNumber => (
-          <Row key={pageNumber} className="resume" style={{ marginBottom: "20px" }}>
-            <Col className="d-flex justify-content-center">
-              <Document 
-                file={getCurrentPdf()} 
-                onLoadSuccess={onDocumentLoadSuccess}
-              >
-                <Page 
-                  pageNumber={pageNumber} 
-                  scale={width > 786 ? 1.7 : 0.6} 
-                />
-              </Document>
-            </Col>
-          </Row>
-        ))}
+        {/* PDF Display - First Page Only */}
+        <Row className="resume">
+          <Document 
+            file={getCurrentPdf()} 
+            className="d-flex justify-content-center"
+            onLoadSuccess={onDocumentLoadSuccess}
+          >
+            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+          </Document>
+        </Row>
 
         {/* Bottom Download Button */}
         <Row style={{ justifyContent: "center", position: "relative" }}>
@@ -94,10 +88,10 @@ function ResumeNew() {
             variant="primary"
             href={getCurrentPdf()}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            style={{ maxWidth: "300px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download {getCurrentLanguageLabel()} CV
+            &nbsp;View Full {getCurrentLanguageLabel()} CV and Download
           </Button>
         </Row>
       </Container>
