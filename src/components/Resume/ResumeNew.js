@@ -12,6 +12,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
   const [language, setLanguage] = useState("english"); // Default to English
+  const [numPages, setNumPages] = useState(null);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -25,6 +26,17 @@ function ResumeNew() {
   // Get current language label
   const getCurrentLanguageLabel = () => {
     return language === "french" ? "French" : "English";
+  };
+
+  // Handle PDF load success
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
+
+  // Generate array of page numbers to render
+  const getPageNumbers = () => {
+    if (!numPages) return [];
+    return Array.from({ length: numPages }, (_, i) => i + 1);
   };
 
   return (
@@ -65,17 +77,21 @@ function ResumeNew() {
           </Button>
         </Row>
 
-        {/* PDF Display - Page 1 */}
+        {/* PDF Display - All Pages */}
         <Row className="resume">
-          <Document file={getCurrentPdf()} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
-        </Row>
-
-        {/* PDF Display - Page 2 */}
-        <Row className="resume">
-          <Document file={getCurrentPdf()} className="d-flex justify-content-center">
-            <Page pageNumber={2} scale={width > 786 ? 1.7 : 0.6} />
+          <Document 
+            file={getCurrentPdf()} 
+            className="d-flex justify-content-center"
+            onLoadSuccess={onDocumentLoadSuccess}
+          >
+            {getPageNumbers().map(pageNumber => (
+              <div key={pageNumber} style={{ marginBottom: "20px" }}>
+                <Page 
+                  pageNumber={pageNumber} 
+                  scale={width > 786 ? 1.7 : 0.6} 
+                />
+              </div>
+            ))}
           </Document>
         </Row>
 
