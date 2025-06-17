@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/Ibrahim Ben Lazrak CV.pdf";
+import pdfFrench from "../../Assets/../Assets/Ibrahim_Ben_Lazrak_CV_French.pdf";
+import pdfEnglish from "../../Assets/../Assets/Ibrahim_Ben_Lazrak_CV_English.pdf"; // Add your English CV path
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -10,47 +11,84 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
+  const [language, setLanguage] = useState("english"); // Default to English
 
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
 
+  // Get current PDF based on selected language
+  const getCurrentPdf = () => {
+    return language === "french" ? pdfFrench : pdfEnglish;
+  };
+
+  // Get current language label
+  const getCurrentLanguageLabel = () => {
+    return language === "french" ? "French" : "English";
+  };
+
   return (
     <div>
       <Container fluid className="resume-section">
         <Particle />
+        
+        {/* Language Selection Buttons */}
+        <Row style={{ justifyContent: "center", position: "relative", marginBottom: "20px" }}>
+          <Col xs="auto">
+            <Button
+              variant={language === "english" ? "primary" : "outline-primary"}
+              onClick={() => setLanguage("english")}
+              style={{ margin: "0 10px" }}
+            >
+              English CV
+            </Button>
+            <Button
+              variant={language === "french" ? "primary" : "outline-primary"}
+              onClick={() => setLanguage("french")}
+              style={{ margin: "0 10px" }}
+            >
+              French CV
+            </Button>
+          </Col>
+        </Row>
+
+        {/* Download Button */}
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={pdf}
+            href={getCurrentPdf()}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;Download {getCurrentLanguageLabel()} CV
           </Button>
         </Row>
 
+        {/* PDF Display - Page 1 */}
         <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-          <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
-        </Row>
-        <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-          <Page pageNumber={2} scale={width > 786 ? 1.7 : 0.6} />
+          <Document file={getCurrentPdf()} className="d-flex justify-content-center">
+            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
           </Document>
         </Row>
 
+        {/* PDF Display - Page 2 */}
+        <Row className="resume">
+          <Document file={getCurrentPdf()} className="d-flex justify-content-center">
+            <Page pageNumber={2} scale={width > 786 ? 1.7 : 0.6} />
+          </Document>
+        </Row>
+
+        {/* Bottom Download Button */}
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={pdf}
+            href={getCurrentPdf()}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;Download {getCurrentLanguageLabel()} CV
           </Button>
         </Row>
       </Container>

@@ -10,6 +10,8 @@ import {
   DiGit,
   DiJava,
   DiUnitySmall,
+  DiLaravel,
+  DiMysql,
   
  
 } from "react-icons/di";
@@ -27,7 +29,7 @@ import {
   SiBlueprint,
   
 } from "react-icons/si";
-import { TbBrandGolang,TbBrandCSharp  } from "react-icons/tb";
+import { TbBrandGolang,TbBrandCSharp, TbBrandNextjs, TbSql  } from "react-icons/tb";
 
 function Techstack() {
   return (
@@ -54,10 +56,19 @@ function Techstack() {
         <DiNodejs />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <TbBrandNextjs />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <DiReact />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiMongodb />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <TbSql />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiLaravel />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiFlutter />
@@ -66,14 +77,15 @@ function Techstack() {
         <SiAndroid />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <DiPython />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <SiFirebase />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiApachecassandra />
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
+      
     </Row>
   );
 }
