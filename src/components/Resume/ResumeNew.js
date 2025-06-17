@@ -33,12 +33,6 @@ function ResumeNew() {
     setNumPages(numPages);
   };
 
-  // Generate array of page numbers to render
-  const getPageNumbers = () => {
-    if (!numPages) return [];
-    return Array.from({ length: numPages }, (_, i) => i + 1);
-  };
-
   return (
     <div>
       <Container fluid className="resume-section">
@@ -78,22 +72,21 @@ function ResumeNew() {
         </Row>
 
         {/* PDF Display - All Pages */}
-        <Row className="resume">
-          <Document 
-            file={getCurrentPdf()} 
-            className="d-flex justify-content-center"
-            onLoadSuccess={onDocumentLoadSuccess}
-          >
-            {getPageNumbers().map(pageNumber => (
-              <div key={pageNumber} style={{ marginBottom: "20px" }}>
+        {numPages && Array.from({ length: numPages }, (_, i) => i + 1).map(pageNumber => (
+          <Row key={pageNumber} className="resume" style={{ marginBottom: "20px" }}>
+            <Col className="d-flex justify-content-center">
+              <Document 
+                file={getCurrentPdf()} 
+                onLoadSuccess={onDocumentLoadSuccess}
+              >
                 <Page 
                   pageNumber={pageNumber} 
                   scale={width > 786 ? 1.7 : 0.6} 
                 />
-              </div>
-            ))}
-          </Document>
-        </Row>
+              </Document>
+            </Col>
+          </Row>
+        ))}
 
         {/* Bottom Download Button */}
         <Row style={{ justifyContent: "center", position: "relative" }}>
